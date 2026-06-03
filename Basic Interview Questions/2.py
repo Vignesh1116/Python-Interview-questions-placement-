@@ -3,22 +3,28 @@
 # Input: "madam"
 # Output: True
 
-# name = input("Enter a string:")
-# rev=name[::-1]
+name = input("Enter a string:")
+rev=name[::-1]
 
-# if name == rev:
-#     print("True")
-# else:
-#     print("False") 
+if name == rev:
+    print("True")
+else:
+    print("False") 
 
 #Check a number is palindrome
 
-num=int(input("Enter the number:"))
+num=int(input())
 n=num
 reverse=0
 
 while num>0:
-    last_digit=num%10
-    reverse=reverse*10+last_digit
-    remove_last_digit=num//10
-print(reverse)    
+    digit=num%10
+    reverse=reverse*10+digit
+    num=num//10
+
+print(reverse)
+
+if n == reverse:
+    print("palindrome")
+else:
+    print("not palindrome")        
